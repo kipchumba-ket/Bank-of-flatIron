@@ -68,16 +68,25 @@ table{
   background-color: #ac4a43;
 }
 form{
+  position: absolute;
+  /* position: relative; */
   margin: auto;
   background-color: rgb(232, 241, 250);
   height: 35em;
   width: 40em;
-  margin-top:2em;
+  margin-top:8em;
   margin-bottom: 4em;
   border-radius: 10px;
   text-align: start;
   box-sizing: border-box;
   padding: 1.5em;
+  left: 25%;
+}
+.formHidden{
+  visibility: hidden;
+}
+.formVisible{
+  visibility: visible;
 }
 label {
   margin-left: 1em;

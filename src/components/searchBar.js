@@ -1,7 +1,7 @@
 import react from 'react';
 import { useState } from "react"
 
-function Searchbar({handleSearch,handleBack}) {
+function Searchbar({handleSearch,handleBack,appendTransaction}) {
     let [searchValue,setSearchValue] = useState('')
     
     let handleSetState = (value) => {
@@ -17,7 +17,7 @@ function Searchbar({handleSearch,handleBack}) {
         <button onClick={() => {
           handleSearch(searchValue)
           }} id = "search-button">Search</button>  
-          <button id='add-button'>Add Transaction</button>
+          <button onClick={appendTransaction} id='add-button'>Add Transaction</button>
      </div>
      );
 }

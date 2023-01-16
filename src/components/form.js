@@ -1,9 +1,8 @@
 import React from "react";
 import { useState,useEffect } from "react";
 
-const Form = () => {
-    let [name, setName] = useState(true)
-
+const Form = ({className, removeTransaction}) => {
+   
 
     let [category,setCategory] = useState(null)
     let [description,setDescription] = useState(null)
@@ -35,7 +34,7 @@ const Form = () => {
     }
 
     let handleSubmit = () =>{
-        fetch("http://localhost:8000/transactions",{
+        fetch("http://localhost:3000/transactions",{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newObj)
@@ -49,7 +48,8 @@ const Form = () => {
 
 
     return ( 
-        <form>
+        <form className={className}>
+            <button onClick={removeTransaction} id="remove-transaction">X</button>
         <select onClick = {(e)=>{
             handleCategory(e.target.value)
         }} id="categories">
