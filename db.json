@@ -97,27 +97,8 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
-    },
-    {
-      "date": "2023-01-01",
-      "description": "johnte",
-      "category": "Fashion",
-      "amount": "10000000",
-      "id": 15
-    },
-    {
-      "date": "2023-01-01",
-      "description": "qw",
-      "category": "Food",
-      "amount": "123",
-      "id": 16
-    },
-    {
-      "date": "2023-01-02",
-      "description": "uuy",
-      "category": "Food",
-      "amount": "12",
-      "id": 17
     }
   ]
-}
+ }
+ 
+ 
