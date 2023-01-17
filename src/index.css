@@ -16,13 +16,13 @@ code {
     monospace;
 }
 table{
-  width: 80em;
-  margin: auto;
+  width: 90em;
+  margin: 2em;
   margin-top: 2em;
   padding: 0;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #00ACEA;
-  border-spacing: 0;
+  border-spacing: 6;
 }
 #tableHeaderContainer{
   margin-bottom: 4em;
@@ -68,7 +68,7 @@ table{
   background-color: #ac4a43;
 }
 form{
-  position: absolute;
+  position: relative;
   /* position: relative; */
   margin: auto;
   background-color: rgb(232, 241, 250);
@@ -83,7 +83,7 @@ form{
   left: 25%;
 }
 .formHidden{
-  visibility: hidden;
+  visibility: visible;
 }
 .formVisible{
   visibility: visible;
@@ -204,7 +204,7 @@ option:focus{
 scale: .95;
 }
 #add-button{
-  position: relative;
+  position: absolute;
   left: 15em;
   border-radius: 10px;
   border: none;
