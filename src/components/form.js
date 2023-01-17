@@ -1,8 +1,8 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
-const Form = ({className,removeTransaction}) => {
-
+const Form = ({className, removeTransaction}) => {
+   
 
     let [category,setCategory] = useState(null)
     let [description,setDescription] = useState(null)
@@ -33,27 +33,23 @@ const Form = ({className,removeTransaction}) => {
         amount
     }
 
-    let handleSubmit = (e) =>{
-        e.preventDefault()
-        console.log("active post")
-        if(newObj.date !== null && newObj.description !== null && newObj.category !== null && newObj.amount !== null){
-        fetch("https://api.npoint.io/14c1b79ce710d064db17/transactions",{
+    let handleSubmit = () =>{
+        fetch("http://localhost:3000/transactions",{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newObj)
         })
         .then((response) =>{ console.log(response)})
     }
-    else{
-        console.log("error")
-    }
 
-}
+    let logAns = (e) => {
+    e.preventDefault()
+    console.log(newObj)}
 
 
     return ( 
         <form className={className}>
-            <button onClick = {removeTransaction} id="remove-transaction">X</button>
+            <button onClick={removeTransaction} id="remove-transaction">X</button>
         <select onClick = {(e)=>{
             handleCategory(e.target.value)
         }} id="categories">
@@ -70,7 +66,7 @@ const Form = ({className,removeTransaction}) => {
            <br/>
            <label for = "amountInput">Amount </label>
            <br/>
-           <input onChange = {(e)=>{handleAmount(parseInt(e.target.value))}} value = {amount} type="number" id="amountInput"></input>
+           <input onChange = {(e)=>{handleAmount(e.target.value)}} value = {amount} type="number" id="amountInput"></input>
            <br/>
            <label for = "amountInput">Date</label>
            <br/>

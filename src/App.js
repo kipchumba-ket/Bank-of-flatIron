@@ -1,4 +1,4 @@
-
+import logo from './logo.svg';
 import './App.css';
 import Table from './components/Table';
 import Form from './components/form';
@@ -10,14 +10,13 @@ function App() {
   const [initialState,setInitialState] = useState(null)
   
   useEffect(() =>{
-  fetch("https://api.npoint.io/14c1b79ce710d064db17/transactions")
+  fetch("http://localhost:3000/transactions")
   .then((response)=> response.json())
   .then((res)=>{ 
     sortByCategory(res)
     setInitialState(res)
   })
   },[])
-
 let sortByCategory = (data) => {
 data.sort((a,b)=>{
   let categoryA = a.category.toLowerCase()
@@ -33,18 +32,18 @@ return 0;
 })
   setTransactions(data)
 }
-
-
   let handleSearch = (value) => {
     
-    let income = transactions.filter((transaction )=> {return transaction.description.toLowerCase().includes(value.toLowerCase())})
+    let income = transactions.filter((trans )=> {return trans.description.toLowerCase().includes(value.toLowerCase())})
     if(income.length > 0){
     console.log(income)
     setTransactions(income)}
     else{console.log("No transactions")}
   }
   
-
+  let handleBack = () =>{
+    setTransactions(initialState)
+  }
   let [name, setName] = useState(false)
   let [newName, setNewName] = useState(true)
   let appendTransaction = ()=>{
@@ -57,16 +56,10 @@ return 0;
     setName(false)
     console.log('true')
   }
-  let handleBack = () =>{
-    setTransactions(initialState)
-    setName(false)
-    setNewName(true)
-  }
  
   let newClassName = newName ? "formVisibible" : "formHidden"
   let className = name ? "formVisible" : "formHidden"
-
-
+  console.log(className)
   return (
     <div className="App">
       <div className = {newClassName} id='mainContent'>
@@ -77,5 +70,4 @@ return 0;
     </div>
   );
 }
-
 export default App;
