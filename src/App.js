@@ -1,4 +1,4 @@
-//import logo from './logo.svg';
+
 import './App.css';
 import Table from './components/Table';
 import Form from './components/form';
@@ -8,15 +8,21 @@ import { useEffect,useState } from "react";
 function App() {
   const [transactions,setTransactions] = useState(null)
   const [initialState,setInitialState] = useState(null)
+  const [isLoading,setIsLoading] = useState(true)
+ 
   
   useEffect(() =>{
-  fetch("https://json-server-vercel-sandy.vercel.app/transactions")
+  fetch("https://bank-of-flat-iron-seven.vercel.app/?")
   .then((response)=> response.json())
   .then((res)=>{ 
+    console.log(res)
     sortByCategory(res)
     setInitialState(res)
+    setIsLoading(false)
   })
   },[])
+
+  
 let sortByCategory = (data) => {
 data.sort((a,b)=>{
   let categoryA = a.category.toLowerCase()
@@ -32,18 +38,18 @@ return 0;
 })
   setTransactions(data)
 }
+
+
   let handleSearch = (value) => {
     
-    let income = transactions.filter((trans )=> {return trans.description.toLowerCase().includes(value.toLowerCase())})
+    let income = transactions.filter((transaction )=> {return transaction.description.toLowerCase().includes(value.toLowerCase())})
     if(income.length > 0){
     console.log(income)
     setTransactions(income)}
     else{console.log("No transactions")}
   }
   
-  let handleBack = () =>{
-    setTransactions(initialState)
-  }
+
   let [name, setName] = useState(false)
   let [newName, setNewName] = useState(true)
   let appendTransaction = ()=>{
@@ -56,20 +62,31 @@ return 0;
     setName(false)
     console.log('true')
   }
+  let handleBack = () =>{
+    setTransactions(initialState)
+    setName(false)
+    setNewName(true)
+  }
  
   let newClassName = newName ? "formVisibible" : "formHidden"
   let className = name ? "formVisible" : "formHidden"
-  console.log(className)
+
+
   return (
     <div className="App">
-       <div className="H1"><h1>Bank of FlatIron</h1></div>
       <div className = {newClassName} id='mainContent'>
-      <Searchbar appendTransaction = {appendTransaction} handleBack = {handleBack} handleSearch = {handleSearch}/>
+      {transactions && <Searchbar appendTransaction = {appendTransaction} handleBack = {handleBack} handleSearch = {handleSearch}/>}
+      {isLoading &&   <div id="loader4">
+        <div id="loadline">
+        </div>
+        <div id="loadline2">
+        </div>
+    </div>}
       {transactions && <Table data = {transactions}/>}
       </div>
       <Form removeTransaction = {removeTransaction} className = {className} />
-     
     </div>
   );
 }
+
 export default App;
