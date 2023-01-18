@@ -37,7 +37,7 @@ const Form = ({className,removeTransaction}) => {
         e.preventDefault()
         console.log("active post")
         if(newObj.date !== null && newObj.description !== null && newObj.category !== null && newObj.amount !== null){
-        fetch("http://localhost:3000/transactions",{
+        fetch("https://json-server-vercel-sandy.vercel.app/transactions",{
             method: "POST",
             headers: {
                 'Accept': 'application/json',
