@@ -10,7 +10,7 @@ function App() {
   const [initialState,setInitialState] = useState(null)
   
   useEffect(() =>{
-  fetch("http://localhost:3000/transactions")
+  fetch("https://json-server-vercel-sandy.vercel.app/transactions")
   .then((response)=> response.json())
   .then((res)=>{ 
     sortByCategory(res)
