@@ -10,7 +10,7 @@ function App() {
   const [initialState,setInitialState] = useState(null)
   
   useEffect(() =>{
-  fetch("https://github.com/kipchumba-ket/json-server-vercel")
+  fetch("http://localhost:3000/transactions")
   .then((response)=> response.json())
   .then((res)=>{ 
     sortByCategory(res)
