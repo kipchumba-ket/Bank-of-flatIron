@@ -97,8 +97,20 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
+    },
+    {
+      "date": "2023-01-10",
+      "description": "12",
+      "category": "Gift",
+      "amount": "12",
+      "id": 15
+    },
+    {
+      "date": "2023-01-01",
+      "description": "12",
+      "category": "Fashion",
+      "amount": "21",
+      "id": 16
     }
   ]
- }
- 
- 
+}

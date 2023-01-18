@@ -10,7 +10,7 @@ function App() {
   const [initialState,setInitialState] = useState(null)
   
   useEffect(() =>{
-  fetch("http://localhost:3000/transactions")
+  fetch("https://github.com/kipchumba-ket/json-server-vercel")
   .then((response)=> response.json())
   .then((res)=>{ 
     sortByCategory(res)
@@ -62,11 +62,13 @@ return 0;
   console.log(className)
   return (
     <div className="App">
+       <h1>Bank of FlatIron</h1>
       <div className = {newClassName} id='mainContent'>
       <Searchbar appendTransaction = {appendTransaction} handleBack = {handleBack} handleSearch = {handleSearch}/>
       {transactions && <Table data = {transactions}/>}
       </div>
       <Form removeTransaction = {removeTransaction} className = {className} />
+     
     </div>
   );
 }
