@@ -215,3 +215,8 @@ scale: .95;
   background-color: red;
   color: white;
 }
+.H1 {
+  font-size: 45px;
+  background-color: rgb(37, 37, 4);
+  color: white;
+}

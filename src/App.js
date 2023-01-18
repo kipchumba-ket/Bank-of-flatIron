@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Table from './components/Table';
 import Form from './components/form';
@@ -62,7 +62,7 @@ return 0;
   console.log(className)
   return (
     <div className="App">
-       <h1>Bank of FlatIron</h1>
+       <div className="H1"><h1>Bank of FlatIron</h1></div>
       <div className = {newClassName} id='mainContent'>
       <Searchbar appendTransaction = {appendTransaction} handleBack = {handleBack} handleSearch = {handleSearch}/>
       {transactions && <Table data = {transactions}/>}
