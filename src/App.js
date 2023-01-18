@@ -12,7 +12,7 @@ function App() {
  
   
   useEffect(() =>{
-  fetch("https://bank-of-flat-iron-seven.vercel.app/?")
+  fetch("https://json-server-vercel-sandy.vercel.app/transactions")
   .then((response)=> response.json())
   .then((res)=>{ 
     console.log(res)

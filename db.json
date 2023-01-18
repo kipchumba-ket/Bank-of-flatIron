@@ -99,7 +99,18 @@
       "id": 14
     },
     {
-      
+      "date": "2023-01-02",
+      "description": "we",
+      "category": "Food",
+      "amount": 12,
+      "id": 15
+    },
+    {
+      "date": "2023-01-02",
+      "description": "we",
+      "category": "Food",
+      "amount": 12,
+      "id": 16
     }
   ]
 }

@@ -37,7 +37,7 @@ const Form = ({className,removeTransaction}) => {
         e.preventDefault()
         console.log("active post")
         if(newObj.date !== null && newObj.description !== null && newObj.category !== null && newObj.amount !== null){
-        fetch("https://bank-of-flat-iron-seven.vercel.app/?",{
+        fetch("http://localhost:3000/transactions",{
             method: "POST",
             headers: {
                 'Accept': 'application/json',

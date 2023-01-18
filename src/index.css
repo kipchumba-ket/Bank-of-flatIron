@@ -1,4 +1,4 @@
-*{
+*{ 
   margin: 0;
 }
 body {
@@ -10,30 +10,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#pageHeader{
-  margin:.5em 1em;
-  font-size: 2em;
-}
-.App{
-  position: relative;
-}
-#mainContent{
-  position: absolute;
-  left: 7%;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 table{
-  width: 80em;
-  margin: auto;
+  width: 90em;
+  margin: 2em;
   margin-top: 2em;
   padding: 0;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #00ACEA;
-  border-spacing: 0;
-  margin-bottom: 5em;
+  border-spacing: 6;
 }
 #tableHeaderContainer{
   margin-bottom: 4em;
@@ -79,7 +68,7 @@ table{
   background-color: #ac4a43;
 }
 form{
-  position: absolute;
+  position: relative;
   /* position: relative; */
   margin: auto;
   background-color: rgb(232, 241, 250);
@@ -92,10 +81,9 @@ form{
   box-sizing: border-box;
   padding: 1.5em;
   left: 25%;
-   
 }
 .formHidden{
-  visibility: hidden;
+  visibility: visible;
 }
 .formVisible{
   visibility: visible;
@@ -200,7 +188,6 @@ option:focus{
 }
 
 #back-button{
-  text-decoration: none;
   border: none;
   font-size: 1.2em;
   padding: .5em 1em;
@@ -217,7 +204,7 @@ option:focus{
 scale: .95;
 }
 #add-button{
-  position: relative;
+  position: absolute;
   left: 15em;
   border-radius: 10px;
   border: none;
@@ -227,71 +214,4 @@ scale: .95;
   position: relative;
   background-color: red;
   color: white;
-}
-#remove-transaction{
-  position: absolute;
-  right: 1em;
-  border: none;
-  font-size: 2em;
-  padding: .2em;
-  background-color: rgb(227, 92, 92);
-  color: white;
-  font-weight: 700;
-  width: 2em;
-  border-radius: 10px;
-}
-#remove-transaction:active{
-   scale: .95;
-}
-.currency{
-  margin-right: 1em ;
-  font-weight: 300;
-}
-#loader4{
-  position: relative;
-  top: 17em;
-  left: 40em;
-}
-
-#loadline{
-  position: relative;
-  top: 3.5em;
-  left: 1.1em;
-  border-top: .3em solid black;
-  border-bottom: .3em solid black;
-  border-right: .3em solid transparent;
-  border-left: .3em solid transparent;
-  border-radius: 100%;
-  height: 80px;
-  width: 80px;
-  animation: load4 1.5s linear infinite;
-}
-#loadline2{
-  position: relative;
-  top: -1.2em;
-  left: 2.2em;
-  border-top: .3em solid black;
-  border-bottom: .3em solid black;
-  border-right: .3em solid transparent;
-  border-left: .3em solid transparent;
-  border-radius: 100%;
-  height: 50px;
-  width: 50px;
-  animation: newload4 1.5s linear infinite;
-}
-@keyframes load4{
-  from{
-      rotate: 0;
-  }
-  to{
-      rotate: 360deg;
-  }
-}
-@keyframes newload4 {
-  from{
-      rotate: 0;
-  }
-  to{
-      rotate: -360deg;
-  }
 }
