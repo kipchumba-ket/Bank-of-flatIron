@@ -19,7 +19,7 @@ the date the transaction was made.
 ## RUNNING THE APPLICATION
 You can access the web app directly by clicking the link below.
 
-        https://bank-of-flat-iron-seven.vercel.app/?
+https://bank-of-flat-iron-seven.vercel.app/?
 To run the application on your machine:-
 
 Run the command below while in the repository's directory
