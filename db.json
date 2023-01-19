@@ -97,13 +97,6 @@
       "category": "Food",
       "amount": 3000,
       "id": 14
-    },
-    {
-      "date": "2023-01-17",
-      "description": "YEAHH",
-      "category": "Gift",
-      "amount": 123,
-      "id": 15
-    }
+     }
   ]
 }
