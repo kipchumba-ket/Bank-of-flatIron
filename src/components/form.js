@@ -60,7 +60,7 @@ const Form = ({className,removeTransaction}) => {
         <select onClick = {(e)=>{
             handleCategory(e.target.value)
         }} id="categories">
-            <option>Food</option>
+            <option>category</option>
             <option>Fashion</option>
             <option>Gift</option>
             <option>Transportation</option>

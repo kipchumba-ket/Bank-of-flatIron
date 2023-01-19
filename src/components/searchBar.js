@@ -13,7 +13,7 @@ function Searchbar({handleSearch,handleBack,appendTransaction}) {
     return ( 
      <div>
         <h1 id="pageHeader">Bank of Flatiron</h1>
-        <a href ="https://bank-of-flat-iron-seven.vercel.app/?" id='back-button' >back</a>
+            <a href="https://bank-of-flat-iron-seven.vercel.app/?" id='back-button' >Back</a>
         <input onChange = {(e)=>{handleSetState(e.target.value)}} value ={searchValue} id='searchInput' type = 'search' placeholder = 'search'></input>
         <button onClick={() => {
           handleSearch(searchValue)

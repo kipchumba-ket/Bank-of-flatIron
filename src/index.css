@@ -83,7 +83,7 @@ form{
   left: 25%;
 }
 .formHidden{
-  visibility: visible;
+  visibility: hidden;
 }
 .formVisible{
   visibility: visible;
